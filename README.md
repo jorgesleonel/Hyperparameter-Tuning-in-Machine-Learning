@@ -10,11 +10,11 @@ the network structure (for example, Number of Hidden Units) and the variables wh
 
 For example, here are some model inbuilt configuration variables :
 
-Learning Rate
-Number of Epochs
-Hidden Layers
-Hidden Units
-Activations Functions
+* Learning Rate
+* Number of Epochs
+* Hidden Layers
+* Hidden Units
+* Activations Functions
 
 Hyperparameters are important since they directly control behavior of the training algo, having important impact on 
 performance of the model under training.
@@ -33,7 +33,7 @@ Hyperparameters can be roughly divided into 2 categories:
 * Optimizer hyperparameters,
 * Model Specific hyperparameters
 
-1. Optimization Hyperparameters
+# 1. Optimization Hyperparameters
 
 They are related more to the optimization and training process.
 
@@ -76,7 +76,7 @@ decreasing.
 There’s a technique that can be used named Early Stopping to determine when to stop training the model; it is about
 stopping the training process in case the validation error has not improved in the past 10 or 20 epochs.
 
-2. Model Hyperparameters
+# 2. Model Hyperparameters
 They are more involved in the structure of the model:
 
 2.1. Number of hidden units:
@@ -108,7 +108,7 @@ Common algorithms include:
 -Random Search
 -Bayesian Optimisation
 
-Grid Search
+# Grid Search
 Grid search is a traditional technique for implementing hyperparameters. It is somewhat about brute force all combinations. 
 Grid search requires creatingtwo set of hyperparameters:
 
@@ -123,6 +123,8 @@ which helps to provide ample data for training the model and ample data for vali
 The Grid search method is a simpler algorithm to use but it suffers if data have high dimensional space called the curse
 of dimensionality.
 
+![grid search](https://miro.medium.com/max/1000/1*9W1MrRkHi0YFmBoHi9Y2Ow.png)
+
 Random Search
 Randomly samples the search space and evaluates sets from a specified probability distribution. Instead of trying to check
 all 100,000 samples, for instance, we can check 1,000 random parameters.
@@ -130,7 +132,7 @@ all 100,000 samples, for instance, we can check 1,000 random parameters.
 The drawback of using the random search algorithm, however, is that it doesn’t use information from prior experiments to
 select the next set. Moreover, it is difficult to predict the next of experiments.
 
-Bayesian Optimisation
+# Bayesian Optimisation
 Hyperparameter setting maximizes the performance of the model on a validation set. ML algos frequently require fine-tuning
 of model hyperparameters. Unfortunately, that tuning is often called ‘black function’ because it cannot be written into a
 formula (derivatives of the function are unknown).
@@ -147,7 +149,7 @@ Gaussian Process prior;
 Next, we must choose an acquisition function which is used to construct a utility function from the model posterior,
 allowing us to determine the next point to evaluate.
 
-Gaussian Process
+# Gaussian Process
 A Gaussian process defines the prior distribution over functions which can be converted into a posterior over functions
 once we have seen some data. The Gaussian process uses Covariance matrix to ensure that values that are close together. 
 The covariance matrix along with a mean µ function to output the expected value ƒ(x) defines a Gaussian process.
@@ -155,7 +157,7 @@ The covariance matrix along with a mean µ function to output the expected value
 1. Gaussian process will be used as a prior for Bayesian inference;
 2. Computing the posterior enables it to be used to make predictions for unseen test cases.
 
-Acquisition Function
+# Acquisition Function
 Introducing sampling data into the search space is done by acquisition functions. It helps to maximize the acquisition
 function to determine the next sampling point. Popular acquisition functions are
 .Maximum Probability of Improvement (MPI)
