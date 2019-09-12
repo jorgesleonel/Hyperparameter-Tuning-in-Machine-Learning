@@ -1,6 +1,9 @@
 # Hyperparameter-Tuning-in-Machine-Learning
 Hyperparameter tuning methods in Machine Learning
 
+https://medium.com/@jorgesleonel/hyperparameters-in-machine-deep-learning-ca69ad10b981
+
+
 In the practice of machine and deep learning, Model Parameters are the properties of training data that will learn on its
 own during training by the classifier or other ML model. For example, weights and biases, or split points in Decision Tree.
 
