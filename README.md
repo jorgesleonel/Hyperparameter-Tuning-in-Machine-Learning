@@ -37,7 +37,7 @@ Hyperparameters can be roughly divided into 2 categories:
 
 They are related more to the optimization and training process.
 
-1.1. Learning rate:
+# 1.1. Learning rate:
 If the model learning rate is way too smaller than optimal values, it will take a much longer time (hundreds or thousands)
 of epochs to reach an ideal state. On the other hand, if the learning rate is much larger than optimal value, then it would
 overshoot the ideal state and the algorithm might not converge. A reasonable starting learning rate = 0.001.
@@ -47,7 +47,9 @@ a) the model will have have hundreds and thousands of parameters each with its o
 to shepherd all of them
 b) error curves are not clean u-shapes; instead, they tend to have more complex shapes with local minima.
 
-1.2. Mini-Batch Size:
+![learning rate](https://www.jeremyjordan.me/content/images/2018/02/Screen-Shot-2018-02-24-at-11.47.09-AM.png)
+
+# 1.2. Mini-Batch Size:
 Batch size has an effect on the resource requirements of the training process, speed and number of iterations in a 
 non-trivial way.
 Historically, there has been a debate to do stochastic training where you fit a single example of the dataset to the 
@@ -66,7 +68,7 @@ However, it comes at expense of needing more memory for the training process. A 
 noise in error calculations , often more useful in preventing the training process from stopping at local minima. A fair
 value for mini-batch size= 32.
 
-1.3. Number of Epochs:
+# 1.3. Number of Epochs:
 To choose the right number of epochs for the training step, the metric we should pay attention to is the Validation Error.
 So, while the computational boost drives us to increase the mini-batch size, this practical algorithmic benefit incentivizes
 to actually make it smaller.
@@ -79,7 +81,7 @@ stopping the training process in case the validation error has not improved in t
 # 2. Model Hyperparameters
 They are more involved in the structure of the model:
 
-2.1. Number of hidden units:
+# 2.1. Number of hidden units:
 Number of hidden units is one of the more mysterious hyperparameters. Let's remember that neural networks are universal
 function approximators, and for them to learn to approximate a function (or a prediction task) , they need to have enough
 ‘capacity ’ to learn the function. The number of hidden units is the main measure of model’s learning capacity.
@@ -90,11 +92,11 @@ Slightly more number of units then optimal number is not a problem, but a much l
 (i.e. if you provide a model with too much capacity, it might tend to overfit, trying to “memorize” the dataset, therefore
 affecting capacity to generalize)
 
-2.2. First hidden layer:
+# 2.2. First hidden layer:
 Another heuristic involving the first hidden layer is that setting the number of hidden units larger than the number of inputs
 tends to enable better results in number of tasks, according to empirical observation.
 
-2.3. Number of layers:
+# 2.3. Number of layers:
 It is often the case that 3-layer Neural Net will outperform a 2-layer one. But going even deeper rarely helps much more. 
 (exception are Convolutional Neural Networks, where the deeper they are, the better they perform).
 
@@ -104,9 +106,9 @@ The process of finding most optimal hyperparameters in machine learning is calle
 
 Common algorithms include:
 
--Grid Search
--Random Search
--Bayesian Optimisation
+* Grid Search
+* Random Search
+* Bayesian Optimisation
 
 # Grid Search
 Grid search is a traditional technique for implementing hyperparameters. It is somewhat about brute force all combinations. 
